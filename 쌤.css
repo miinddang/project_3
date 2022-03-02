@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+.sec3.inner * {
+    border: 1px solid lightblue;
+}
+.sec3.inner {
+    border: 1px solid red;
+    padding: 80px 0;
+    height: 400px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.sec3.inner>div {
+    width: calc(50% - 24px);
+}
+.notice {
+    position: relative;
+}
+.notice>p, .notice>ul, .notice>a {
+    position: absolute;
+}
+.notice>ul {
+    top: 50px;
+    width: 100%;
+    display: none;
+}
+.notice>ul.on {
+    display: block;
+}
+.notice>p {
+    width: 30%; height: 30px;
+    background-color: lightcoral;
+    padding-left: 24px;
+}
+.notice>p.on {
+    background-color: lightgoldenrodyellow;
+}
+.notice>p:nth-of-type(1) {
+    border-right: 1px solid;
+}
+.notice>p:nth-of-type(2) {
+    left: 30%;
+}
+.notice>a {
+    right: 0px;
+    top: 5px;
+    display: none;
+}
+.notice>a.on {
+    display: block;
+}
+.sec4 * {
+    border: 1px solid lightsalmon;
+}
+.sec4 {
+    background-color: linen;
+    padding: 80px 0;
+}
+.sec4 .inner {
+    width: calc(100% - 160px);
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+}
+.sec4 .inner>button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 45px;
+}
+.prev {
+    left: -80px;
+}
+.next {
+    right: -80px;
+}
+.sec4 .slide {
+    border: 10px solid lime;
+    overflow: hidden;
+}
+.slide_con {
+    width: 125%;
+    border: 5px solid red;
+    display: flex;
+}
+.slide_con .item {
+    width: 20%;
+    padding-top: 25%;
+    margin: 0 10px;
+    position: relative;
+    overflow: hidden;
+}
+.slide_con .item>* {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+}
+.slide_con .item img{
+    /* width: 100%; */
+    height: 100%;
+    transition: 0.3s;
+}
+.slide_con .item a {
+    color: transparent;
+    width: 100%;
+    height: 100%;
+}
+.item:hover img {
+    opacity: 0.3;
+    background-color: rgba(0, 0, 0, 0.5);
+}
